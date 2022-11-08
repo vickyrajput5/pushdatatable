@@ -23,20 +23,7 @@ function emptyRow(){
 return isEmpty;
 }
 
-function duplicate(){
-    var fname=document.getElementById('fname').value,
-    lname=document.getElementById('lname').value,
-    age=document.getElementById('age').value;
-    if(fname === fname){
-        alert("duplicate data")
-    }
-    if(lname === lname){
-        alert("duplicate data")
-    }
-    if(age === age){
-        alert("duplicate data")
-    }
-}
+
 function addrow(){
 
   if(!emptyRow()){
