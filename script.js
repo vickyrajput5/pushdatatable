@@ -1,6 +1,5 @@
 // add row
-var rindex, 
-table = document.getElementById("table");
+var rindex, table = document.getElementById("table");
 
 function emptyRow(){
     var isEmpty = false,
@@ -22,7 +21,19 @@ function emptyRow(){
     }
 return isEmpty;
 }
+function RemoveemptyRow(){
+    var isEmpty = false,
+    fname=document.getElementById('fname').value,
+    lname=document.getElementById('lname').value,
+    age=document.getElementById('age').value;
 
+    if(fname === "" && lname === "" && age === ""){
+        alert("Please Select row you want to delete")
+        isEmpty= true;
+    }
+  
+return isEmpty;
+}
 
 function addrow(){
 
@@ -81,10 +92,12 @@ if(!emptyRow()){
 }
 }
 function removeSelectedRow(){
-    table.deleteRow(rindex);
+  if(!RemoveemptyRow()){
+    table.deleteRow(rindex),
     document.getElementById('fname').value='',
     document.getElementById('lname').value='',
     document.getElementById('age').value='';
+  }
 }
 
 const keySearch= ()=>{
